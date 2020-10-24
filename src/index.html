@@ -46,8 +46,8 @@
 
 				<div class="banner__actions actions">
 					<button
-                        class="actions__button mdc-icon-button material-icons js-open-modal"
-                        data-target="js-modal-crop"
+						class="button button__iconed button__iconed--purple mdc-icon-button material-icons js-open-modal"
+						data-target="js-modal-crop"
 					>
 						edit
 					</button>
@@ -58,34 +58,55 @@
 		</section>
 		<!-- /.page__section section -->
 
-		<div class="mdc-dialog js-modal-crop">
+		<div class="modal crop mdc-dialog js-modal-crop">
 			<div class="mdc-dialog__container">
 				<div
-					class="mdc-dialog__surface"
+					class="mdc-dialog__surface js-crop-banner"
 					role="alertdialog"
 					aria-modal="true"
 					aria-labelledby="my-dialog-title"
 					aria-describedby="my-dialog-content"
 				>
 					<div class="mdc-dialog__content" id="my-dialog-content">
-						Discard draft?
+						<h3
+							class="modal__title mdc-typography mdc-typography--headline3 headline headline--1"
+						>
+							Edit banner
+						</h3>
+
+						<div class="crop__area">
+							<img
+								src="./assets/images/banner-image01.jpg"
+								alt=""
+								class="crop__area-image image js-crop-image"
+							/>
+						</div>
 					</div>
-					<div class="mdc-dialog__actions">
+
+					<div class="modal__actions mdc-dialog__actions">
 						<button
 							type="button"
-							class="mdc-button mdc-dialog__button"
+							class="button button--red mdc-button mdc-dialog__button"
 							data-mdc-dialog-action="cancel"
 						>
-							<div class="mdc-button__ripple"></div>
 							<span class="mdc-button__label">Cancel</span>
 						</button>
 						<button
 							type="button"
 							class="mdc-button mdc-dialog__button"
+						>
+							<div class="mdc-button__ripple"></div>
+							<span class="mdc-button__label"
+								>Download image</span
+							>
+						</button>
+						<button
+							type="button"
+							class="mdc-button mdc-button--raised mdc-dialog__button"
 							data-mdc-dialog-action="discard"
 						>
 							<div class="mdc-button__ripple"></div>
-							<span class="mdc-button__label">Discard</span>
+							<span class="mdc-button__label">Save</span>
 						</button>
 					</div>
 				</div>

@@ -1,9 +1,13 @@
 import Modal from './components/modal';
+import Crop from './components/crop';
 
 function App() {
     const app = {
         ready: function() {
-            Modal()
+            Modal();
+            Crop({
+                url: 'test',
+            })
         }
     }
 
