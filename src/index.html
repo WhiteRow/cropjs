@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cropjs</title>
+
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+		/>
+	</head>
+	<body class="page">
+		<section class="page__section section banner">
+			<div class="container">
+				<div class="banner__block">
+					<h1
+						class="mdc-typography mdc-typography--headline1 headline headline--1"
+					>
+						Welcome!
+					</h1>
+
+					<p
+						class="banner__description mdc-typography mdc-typography--body1 text"
+					>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Inventore dolore architecto aspernatur? Quis architecto
+						voluptates repudiandae dolor magni.
+					</p>
+
+					<div class="mdc-touch-target-wrapper">
+						<button
+							class="mdc-button mdc-button--raised mdc-button--touch"
+						>
+							<div class="mdc-button__ripple"></div>
+							<span class="mdc-button__label">Show more</span>
+							<div class="mdc-button__touch"></div>
+						</button>
+					</div>
+				</div>
+				<!-- /.banner__block -->
+
+				<div class="banner__actions actions">
+					<button
+                        class="actions__button mdc-icon-button material-icons js-open-modal"
+                        data-target="js-modal-crop"
+					>
+						edit
+					</button>
+				</div>
+				<!-- /.actions -->
+			</div>
+			<!-- /.container -->
+		</section>
+		<!-- /.page__section section -->
+
+		<div class="mdc-dialog js-modal-crop">
+			<div class="mdc-dialog__container">
+				<div
+					class="mdc-dialog__surface"
+					role="alertdialog"
+					aria-modal="true"
+					aria-labelledby="my-dialog-title"
+					aria-describedby="my-dialog-content"
+				>
+					<div class="mdc-dialog__content" id="my-dialog-content">
+						Discard draft?
+					</div>
+					<div class="mdc-dialog__actions">
+						<button
+							type="button"
+							class="mdc-button mdc-dialog__button"
+							data-mdc-dialog-action="cancel"
+						>
+							<div class="mdc-button__ripple"></div>
+							<span class="mdc-button__label">Cancel</span>
+						</button>
+						<button
+							type="button"
+							class="mdc-button mdc-dialog__button"
+							data-mdc-dialog-action="discard"
+						>
+							<div class="mdc-button__ripple"></div>
+							<span class="mdc-button__label">Discard</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="mdc-dialog__scrim"></div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,9 @@
+.container {
+    $horizontalGutter: 20px;
+
+    height: 100%;
+    max-width: 1440px;
+    padding-right: $horizontalGutter;
+    padding-left: $horizontalGutter;
+    margin: 0 auto;
+}

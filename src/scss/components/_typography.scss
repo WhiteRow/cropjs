@@ -1,0 +1,13 @@
+@use "@material/typography/mdc-typography";
+
+.headline {
+    margin: 0;
+
+    &--1 {
+        margin-bottom: 20px;
+    }
+}
+
+.text {
+    margin: 0;
+}
