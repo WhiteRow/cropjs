@@ -2,10 +2,10 @@
 @use "@material/dialog/mdc-dialog";
 
 .modal {
-    @include dialog.max-width(1200px, 40px);
+    @include dialog.max-width(1400px, 40px);
     @include dialog.content-padding(40px, 0px, 40px, 0px);
 
-    &__title {
+    &__header {
         padding-left: 20px;
     }
 
