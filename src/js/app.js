@@ -6,6 +6,7 @@ function App() {
         ready: function() {
             Modal();
             Crop({
+                root: 'js-crop-banner',
                 url: 'test',
             })
         }

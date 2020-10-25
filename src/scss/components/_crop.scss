@@ -1,9 +1,11 @@
 .crop {
     &__area {
+        width: 1400px;
+        height: 600px;
+
         &-image {
             width: 100%;
-            max-width: 100%;
-            max-height: 600px;
+            height: 100%;
 
             object-fit: cover;
             object-position: bottom;
