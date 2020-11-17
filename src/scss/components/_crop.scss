@@ -1,4 +1,8 @@
 .crop {
+    & .cropper-container {
+        overflow: hidden;
+    }
+
     &__area {
         width: 1400px;
         height: 600px;

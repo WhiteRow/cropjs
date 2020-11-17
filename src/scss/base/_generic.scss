@@ -6,4 +6,8 @@ html {
     *::before {
         box-sizing: inherit;
     }
+
+    input[type="file"] {
+        display: none;
+    }
 }

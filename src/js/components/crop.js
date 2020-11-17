@@ -4,7 +4,7 @@
 
     Сделать контролы.
 
-    Сделать загрузку изображения.
+    Сделать загрузку изображения - сделал
 
     Сделать сохранение изображения в баннер, и отдачу данных об редактировании.
 */
@@ -26,16 +26,37 @@ function Crop(options) {
 		cropBoxMovable: false,
 		cropBoxResizable: false,
 		toggleDragModeOnDblclick: false,
-		minContainerWidth: 1400,
+		minContainerWidth: 1400, //* давать по дефолту другое значение
 		minContainerHeight: 600,
+		downloadInput: 'js-crop-download-input',
 	};
+
 	options = Object.assign(defaults, options);
+
 	const root = document.querySelector(`.${options.root}`);
 	const image = root.querySelector(`.${options.image}`);
-	const cropper = new Cropper(image, options);
+	let cropper = new Cropper(image, options);
+	const downloadInput = root.querySelector(`.${options.downloadInput}`);
 
-	console.log(Cropper);
-	console.log(cropper);
+	function downloadImage() {
+		const file = this.files[0];
+		const fileUrl = window.URL.createObjectURL(file);
+
+		image.src = fileUrl;
+
+		cropRe()
+	}
+
+	function cropDestroy() {
+		cropper.destroy();
+	}
+
+	function cropRe() {
+		cropDestroy();
+		cropper = new Cropper(image, options);
+	}
+	
+	downloadInput.addEventListener('change', downloadImage);
 }
 
 export default Crop;
